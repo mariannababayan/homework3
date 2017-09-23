@@ -59,11 +59,21 @@ if (num5 === num6) {
 	
 //takes three inputs and returns the first truethy value
 const findTheTruethyValue = function (value1, value2, value3) {
-  if (value1 ===true) {
+  if (value1 !==false || value1 !==NaN || value1 !==undefined || value1 !==0 || value1 !=='' || value1 !==null ) {
     return value1;
-  } else if (value1 !==true && value2 ===true) {
+    
+  } else if (value1 ===false || value1 ===NaN || value1 ===undefined || value1 ===0 || value1 ==='' || value1 ===null && 
+
+    value2 !==false || value2 !==NaN || value2 !==undefined || value2 !==0 || value2 !=='' || value2 !==null)
+     {
     return value2;
-  } else if (value1 !==true && value2 !==true && value3 ===true)
+
+  } else if (value1 ===false || value1 ===NaN || value1 ===undefined || value1 ===0 || value1 ==='' || value1 ===null && 
+
+    value2 ===false || value2 ===NaN || value2 ===undefined || value2 ===0 || value2 ==='' || value2 ===null && 
+
+     value3 !==false || value3 !==NaN || value3 !==undefined || value3 !==0 || value3 !=='' || value3 !==null)
+
     return value3;
   }
 
